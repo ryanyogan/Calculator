@@ -26,37 +26,37 @@ export default class App extends React.Component {
           <Text style={styles.value}>75</Text>
 
           <Row>
-            <Button text="C" onPress={() => null} />
-            <Button text="+/-" onPress={() => null} />
-            <Button text="%" onPress={() => null} />
-            <Button text="/" onPress={() => null} />
+            <Button text="C" theme="secondary" onPress={() => null} />
+            <Button text="+/-" theme="secondary" onPress={() => null} />
+            <Button text="%" theme="secondary" onPress={() => null} />
+            <Button text="/" theme="accent" onPress={() => null} />
           </Row>
 
           <Row>
             <Button text="7" onPress={() => null} />
             <Button text="8" onPress={() => null} />
             <Button text="9" onPress={() => null} />
-            <Button text="*" onPress={() => null} />
+            <Button text="*" theme="accent" onPress={() => null} />
           </Row>
 
           <Row>
             <Button text="4" onPress={() => null} />
             <Button text="5" onPress={() => null} />
             <Button text="6" onPress={() => null} />
-            <Button text="-" onPress={() => null} />
+            <Button text="-" theme="accent" onPress={() => null} />
           </Row>
 
           <Row>
             <Button text="1" onPress={() => null} />
             <Button text="2" onPress={() => null} />
             <Button text="3" onPress={() => null} />
-            <Button text="+" onPress={() => null} />
+            <Button text="+" theme="accent" onPress={() => null} />
           </Row>
 
           <Row>
             <Button text="0" size="double" onPress={() => null} />
             <Button text="." onPress={() => null} />
-            <Button text="=" onPress={() => null} />
+            <Button text="=" theme="accent" onPress={() => null} />
           </Row>
         </SafeAreaView>
       </View>
