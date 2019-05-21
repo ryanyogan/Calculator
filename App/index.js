@@ -18,12 +18,14 @@ const styles = StyleSheet.create({
   }
 });
 
+const initialState = {
+  currentValue: "0",
+  operator: null,
+  previousValue: null
+};
+
 export default class App extends React.Component {
-  state = {
-    currentValue: "0",
-    operator: null,
-    previousValue: null
-  };
+  state = initialState;
 
   handleTap = (type, value) => {
     this.setState(state => {
@@ -82,6 +84,23 @@ export default class App extends React.Component {
           };
         }
       }
+
+      if (type === "clear") {
+        return initialState;
+      }
+
+      if (type === "posneg") {
+        return {
+          currentValue: `${parseFloat(state.currentValue) * -1}`
+        };
+      }
+
+      if (type === "percentage") {
+        return {
+          currentValue: `${parseFloat(state.currentValue) * 0.01}`
+        };
+      }
+
       return state;
     });
   };
@@ -96,9 +115,21 @@ export default class App extends React.Component {
           </Text>
 
           <Row>
-            <Button text="C" theme="secondary" onPress={() => null} />
-            <Button text="+/-" theme="secondary" onPress={() => null} />
-            <Button text="%" theme="secondary" onPress={() => null} />
+            <Button
+              text="C"
+              theme="secondary"
+              onPress={() => this.handleTap("clear")}
+            />
+            <Button
+              text="+/-"
+              theme="secondary"
+              onPress={() => this.handleTap("posneg")}
+            />
+            <Button
+              text="%"
+              theme="secondary"
+              onPress={() => this.handleTap("percentage")}
+            />
             <Button
               text="/"
               theme="accent"
