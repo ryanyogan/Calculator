@@ -15,7 +15,10 @@
     "react-native-web": "^0.11.7"
   },
   "devDependencies": {
-    "babel-preset-expo": "^7.1.0"
+    "babel-preset-expo": "^7.1.0",
+    "eslint": "^6.6.0",
+    "eslint-config-handlebarlabs": "^0.0.4",
+    "prettier": "^1.19.1"
   },
   "private": true
 }
